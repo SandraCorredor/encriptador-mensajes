@@ -157,10 +157,3 @@ body {
     50%   {transform:scaleY(-1) rotate(0deg)}
     100%  {transform:scaleY(-1) rotate(-135deg)}
   }
-
-  git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/SandraCorredor/encriptador-mensajes.git
-git push -u origin main
