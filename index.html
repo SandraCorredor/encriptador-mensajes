@@ -3,53 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encriptador de Texto</title>
+    <title>Encriptador de texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="encriptar">
-        <textarea
-          name="texto"
-          class="texto"
-          id="texto"
-          cols="30"
-          rows="10"
-          placeholder="Ingresa el texto aquí"
-        ></textarea>
-        <div class="terminos">
-          <p>Solo letras minúsculas y sin acentos</p>
+    
+    <div class="main">
+        <div>
+            <div class="header">
+                <img src="./assets/Logo.png" alt="logo alura" />
+              </div>
+            <form class="form__section">
+                <textarea
+                class="form__input"
+                name="mensaje"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Ingrese el texto  aquí"
+                ></textarea>
+                <div class="btn__container">
+                <div class="alert__msj">
+                    <img
+                    src="./assets/bi_exclamation-circle-fill.png"
+                    alt="alert icon"
+                    /><span>Solo letras minúsculas y sin acentos</span>
+                </div>
+                </div>
+                <div class="submit__container">
+                <input class="form__btn" type="submit" value="Encriptar" />
+                <input
+                    class="form__btn form__btn--secondary"
+                    type="submit"
+                    value="Desencriptar"
+                />
+                </div>
+            </form>
         </div>
-        <div class="botones">
-          <button class="btn-encriptar" type="button" onclick="encriptar()">
-            Encriptar
-          </button>
-          <button
-            class="btn-desencriptar"
-            type="button"
-            onclick="desencriptar()"
-          >
-            Desencriptar
-          </button>
-        </div>
-      </div>
-      <div class="encriptado">
-        <img src="" alt="" id="img-salto" />
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-          <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
-          <p id="parrafo">
-            Ingresa el texto que deseas encriptar o desencriptar
+      <div class="result">
+        <img
+          src="./assets/Muñeco.png"
+          alt="imagen de dibujo"
+          class="result__img"
+        />
+        <div class="loader hidden"></div>
+        <div class="result__continer">
+          <h3 class="result__title">Ningún mensaje fue encontrado</h3>
+          <p class="result__text">
+            Ingresa el texto que desees encriptar o desencriptar.
           </p>
-          <textarea
-            name="mensaje"
-            class="mensaje"
-            id="mensaje"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <button class="result__btn form__btn form__btn--secondary hidden">
+            Copiar
+          </button>
         </div>
       </div>
     </div>
+    <script src="encriptador.js"></script>
   </body>
-  <script src="index.js"></script>
 </html>
